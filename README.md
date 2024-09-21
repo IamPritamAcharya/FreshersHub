@@ -1,11 +1,18 @@
+Here’s a modified version of your README that includes a video at the top:
+
+---
 
 # FreshersHub: Full-Stack Academic Resource App
 
 **August 2024 - September 2024**
 
-![FreshersHub Logo](https://example.com/logo.png) <!-- Replace with actual logo URL -->
 
-Welcome to FreshersHub, your ultimate academic companion designed to streamline your college experience. This full-stack app is crafted to provide real-time access to essential academic resources and services.
+## 🎥 Introduction Video
+
+[![Watch the Video](https://youtu.be/qfFmIitDSTk)  
+*Click the image to watch the introduction video!*
+
+Welcome to FreshersHub, your ultimate academic companion designed to streamline your college experience. This full-stack app provides real-time access to essential academic resources and services.
 
 ## 🚀 Key Features
 
@@ -20,7 +27,7 @@ Welcome to FreshersHub, your ultimate academic companion designed to streamline 
 
 The source code for this project is private. However, you can download and try the app using the following link:
 
-[Download FreshersHub](https://example.com/download) <!-- Replace with actual download link -->
+[Download FreshersHub](https://drive.google.com/file/d/1o_Mx5I90Lslsfk9-jvEUDjepry8nDe1j/view?usp=sharing) 
 
 ## 🛠️ Tools and Technologies
 
@@ -35,3 +42,7 @@ The source code for this project is private. However, you can download and try t
 
 - **August 2024**: Initial development and core feature implementation.
 - **September 2024**: Final enhancements, testing, and deployment.
+
+---
+
+Feel free to replace `your_video_id` with the actual ID of your video!
