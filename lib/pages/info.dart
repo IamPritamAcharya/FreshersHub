@@ -1,4 +1,3 @@
-// my api key = AIzaSyCICLZJh-QOLEQ9vX79TK9Rp3BzK2Y-JFQ
 
 import 'dart:math';
 
