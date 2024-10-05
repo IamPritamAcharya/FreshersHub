@@ -25,8 +25,6 @@ Welcome to FreshersHub, your ultimate academic companion designed to streamline 
 
 ## 📥 Download the App
 
-The source code for this project is private. However, you can download and try the app using the following link:
-
 [Download FreshersHub](https://drive.google.com/file/d/1o_Mx5I90Lslsfk9-jvEUDjepry8nDe1j/view?usp=sharing) 
 
 ## 🛠️ Tools and Technologies
