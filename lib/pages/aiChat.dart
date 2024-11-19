@@ -47,7 +47,6 @@ class _AiChatState extends State<AiChat> {
         var result = jsonDecode(value.body);
         var botText = result['candidates'][0]['content']['parts'][0]['text'];
 
-        // Remove repeated text at the beginning of the response
         botText = removeRepetition(m.text, botText);
 
         ChatMessage m1 = ChatMessage(
@@ -66,15 +65,13 @@ class _AiChatState extends State<AiChat> {
   }
 
   String removeRepetition(String userMessage, String botResponse) {
-    // Normalize the messages for comparison
+
     String userNormalized = userMessage.trim().toLowerCase();
     String botNormalized = botResponse.trim().toLowerCase();
 
-    // Split the user message into words for more precise matching
     List<String> userWords = userNormalized.split(RegExp(r'\s+'));
     List<String> botWords = botNormalized.split(RegExp(r'\s+'));
 
-    // Find the longest matching prefix
     int maxMatchLength = 0;
     for (int i = 0; i < userWords.length; i++) {
       if (i < botWords.length && userWords[i] == botWords[i]) {
@@ -84,12 +81,10 @@ class _AiChatState extends State<AiChat> {
       }
     }
 
-    // If the match is significant (more than a third of the user message length), remove it
     if (maxMatchLength > userWords.length / 3) {
       botResponse = botWords.sublist(maxMatchLength).join(' ').trim();
     }
 
-    // Further check for repeated segments within the bot's response
     String cleanedBotResponse = _removeInternalRepetitions(botResponse);
     return cleanedBotResponse;
   }
@@ -201,13 +196,13 @@ class _AiChatState extends State<AiChat> {
           children: [
             if (!conversationStarted)
               Positioned(
-                top: MediaQuery.of(context).size.height * 0.35, // Adjust the vertical position as needed
+                top: MediaQuery.of(context).size.height * 0.35, 
                 left: 0,
                 right: 0,
                 child: Center(
                   child: Image.asset(
                     'lib/icons/gemini.png',
-                    height: 40, // Keep the size constant
+                    height: 40, 
                     color: Colors.grey.shade600.withAlpha(90),
                   ),
                 ),
