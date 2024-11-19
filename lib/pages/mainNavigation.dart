@@ -16,7 +16,7 @@ class _MainNavigationState extends State<MainNavigation> {
   int _pageIndex = 0;
 
   final List<Widget> _pages = [
-    FirstPage(),  // Replace with the appropriate first page widget
+    FirstPage(), 
     MiddlePage(),
     LastPage(),
   ];
