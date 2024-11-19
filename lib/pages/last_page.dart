@@ -36,7 +36,7 @@ class _LastPageState extends State<LastPage> {
       setState(() {
         _generalBooks = allBooks;
         _allBooks.addAll(allBooks);
-        _filteredBooks = List.from(_generalBooks); // Initialize _filteredBooks with general books
+        _filteredBooks = List.from(_generalBooks); 
         _loadFavorites();
       });
     });
@@ -56,7 +56,7 @@ class _LastPageState extends State<LastPage> {
     List<String>? favoriteIds = prefs.getStringList('favoriteBooks');
     if (favoriteIds != null) {
       setState(() {
-        // Ensure that only non-trending books are included in favorites
+   
         _favoriteBooks = _allBooks.where((book) => favoriteIds.contains(book.id) && !_devsChoiceBooks.contains(book)).toList();
       });
     }
@@ -115,7 +115,7 @@ class _LastPageState extends State<LastPage> {
       _showFavorites = !_showFavorites;
       _filteredBooks = _showFavorites ? _favoriteBooks : _allBooks;
     });
-    _searchBooks(); // Apply search filter after toggling
+    _searchBooks(); 
   }
 
   @override
@@ -126,18 +126,15 @@ class _LastPageState extends State<LastPage> {
   }
 
   Future<void> _handleRefresh() async {
-    // Simulate a network call with a delay
+    
     await Future.delayed(Duration(seconds: 2));
 
-    // Fetch new data from Firestore
     final booksSnapshot = await FirebaseFirestore.instance.collection('books').get();
     final devsChoiceSnapshot = await FirebaseFirestore.instance.collection('DevsChoice').get();
 
-    // Parse the data into book objects
     final allBooks = booksSnapshot.docs.map((doc) => Book.fromFirestore(doc)).toList();
     final devsChoiceBooks = devsChoiceSnapshot.docs.map((doc) => Book.fromFirestore(doc)).toList();
 
-    // Update the state with the new data
     setState(() {
       _generalBooks = allBooks;
       _devsChoiceBooks = devsChoiceBooks;
