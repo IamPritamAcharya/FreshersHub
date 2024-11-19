@@ -250,7 +250,7 @@ class _FirstPageState extends State<FirstPage> {
     }
   }
 
-  // Helper function to build rows of smart devices
+
   List<Widget> _buildSmartDeviceRows() {
     List<Widget> rows = [];
     for (int i = 0; i < mySmartDevices.length; i += 6) {
@@ -284,7 +284,7 @@ class _FirstPageState extends State<FirstPage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 55),
-            // welcome home PRITAM
+      
             Padding(
               padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
               child: Center(
@@ -315,11 +315,11 @@ class _FirstPageState extends State<FirstPage> {
               ),
             ),
             const SizedBox(height: 35),
-            // smart devices horizontal list
+            
             Expanded(
               child: Column(
                 children: [
-                  // First row
+                  
                   Expanded(
                     child: SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
@@ -329,7 +329,7 @@ class _FirstPageState extends State<FirstPage> {
                     ),
                   ),
                   const SizedBox(height: 0),
-                  // Second row
+               
                   Expanded(
                     child: SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
