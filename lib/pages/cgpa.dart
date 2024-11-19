@@ -77,7 +77,7 @@ class _SemesterSelectionPageState extends State<SemesterSelectionPage> {
                   child: Text('Credit System', style: GoogleFonts.poppins(fontSize: 13)),
                 ),
               ),
-              // Add the new Personal Tips button here
+            
               SizedBox(height: 20),
               Center(
                 child: ElevatedButton(
