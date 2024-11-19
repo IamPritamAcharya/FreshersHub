@@ -21,7 +21,7 @@ void main() async {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => ThemeProvider()),
-        ChangeNotifierProvider(create: (context) => FavoritesProvider()), // Add FavoritesProvider
+        ChangeNotifierProvider(create: (context) => FavoritesProvider()), // FavoritesProvider
       ],
       child: MyApp(),
     ),
@@ -48,7 +48,7 @@ class _MyAppState extends State<MyApp> {
 
     setState(() {
       if (signedIn) {
-        _currentPage = HiddenDrawer(); // Replace with your main app widget
+        _currentPage = HiddenDrawer(); 
       } else {
         _currentPage = seenWelcome ? LoginPage() : WelcomePage();
       }
